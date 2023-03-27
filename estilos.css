@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    display: flex;
+    width: 80%;
+    height: 80px;
+    letter-spacing: 6px;
+    background-color: #52796F;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.grid{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.container-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 2px solid #354F52;
+    background-color: #929292;
+    color: white;
+    padding: 30px;
+}
+
+.incidencies{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 1px solid #354F52;
+    padding: 25px;
+    align-items: center;
+    margin: 5px 0px 5px 0px;
+}
+.incidencies:hover{
+    cursor: pointer;
+    background-color: #CAD2C5;
+}
+
+.grid a{
+   text-decoration: none; 
+}
+
+
+@media only screen and (max-width: 780px) {
+    @media only screen and (max-width: 500px){
+        .container-grid, .incidencies{
+            display: grid;
+            padding: 10px;
+
+        }
+
+        .container-grid{
+          padding-left: 10px;
+          grid-template-columns: 0.3fr 0.3fr 0.3fr 0.3fr; 
+        }
+
+        
+    }
+    
+    *{
+        padding: 0;
+        margin: 0;
+    }
+
+    .id{
+        grid-area: id;
+    }
+    .depar{
+        grid-area: depar;
+    }
+
+    .desc{
+        grid-area: desc;
+    }
+
+    .data{
+        grid-area: data;
+    }
+    .container-grid ,.incidencies{
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 'id depar desc data'; 
+    }
+  }
+
+  /*Encabezado*/
+  
