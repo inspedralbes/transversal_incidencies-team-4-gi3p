@@ -27,17 +27,12 @@ if ($mysqli->connect_errno) {
     echo($departament);       
 
     $sentencia = $mysqli->prepare("INSERT INTO INCIDENCIA
-    (  descripcio,   departament)
+    (descripcio,   departament)
     VALUES
     (?,  ?)");
     $sentencia->bind_param("ss", $descripcio, $departament);
     $sentencia->execute();
     //header("Location: index.html");
-    
-    $sentencia = $mysqli->prepare("SELECT idInc FROM INCICENDIA WHERE idInc = max(?)");
-    
-    $sentencia->bind_param("i", $id);
-    $sentencia->execute();
     ?>
 
 </body>

@@ -9,5 +9,5 @@ $id = $_GET["idInc"];
 $sentencia = $mysqli->prepare("DELETE FROM INCIDENCIA WHERE idInc = ?");
 $sentencia->bind_param("i", $id);
 $sentencia->execute();
-header("Location: listar.php");
+header("Location: listarAdmin.php");
 ?>

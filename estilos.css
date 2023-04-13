@@ -22,6 +22,21 @@ h1{
     text-align: center;
     margin-bottom: 100px;
 }
+
+.grid-index{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.container-grid-index{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #929292;
+    color: white;
+    padding: 20px;  
+}
 .container-grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -40,7 +55,21 @@ h1{
     align-items: center;
     margin: 5px 0px 5px 0px;
 }
+.incidencies-admin{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 1px solid #354F52;
+    padding: 25px;
+    align-items: center;
+    margin: 5px 0px 5px 0px;
+}
 .incidencies:hover{
+    cursor: pointer;
+    background-color: #CAD2C5;
+}
+
+.incidencies-admin:hover{
     cursor: pointer;
     background-color: #CAD2C5;
 }
@@ -48,6 +77,10 @@ h1{
 .grid a{
    text-decoration: none; 
 }
+
+.grid-index a{
+    text-decoration: none; 
+ }
 
 
 @media only screen and (max-width: 780px) {

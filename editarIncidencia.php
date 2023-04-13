@@ -1,3 +1,7 @@
+<?php
+$mysqli = include_once "conexion.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +17,6 @@
 
 <?php
 include_once "encabezado.php";
-$mysqli = include_once "conexion.php";
 $id = $_GET["idInc"];
 $sentencia = $mysqli->prepare("SELECT idInc, DATE(data) as data,prioritat, descripcio, tipus, tecnic, departament FROM INCIDENCIA WHERE idInc = ?");
 $sentencia->bind_param("i", $id);

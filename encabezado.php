@@ -10,8 +10,8 @@
 <body>
     
 <nav class="menu">
-  <a class="item" href="./index.html">Inici</a>
-  <a class="item" href="./listar.php">Llistat</a>
+  <a class="item" href="./index.php">Inici</a>
+  <a class="item" href="./listarUsu.php">Llistat</a>
   <a class="item" href="#">Registre</a>
   <a class="item" href="#">Visualització</a>
 </nav>

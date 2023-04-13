@@ -25,7 +25,8 @@ $resultado = $mysqli->query("SELECT descripcio, departament FROM INCIDENCIA");
             <option value="CIE">Ciencies</option>
             <option value="HIS">Historia</option>
             <option value="MAT">Matematiques</option>
-        <td> Descripcio: <input type ="text" name="descripcio">
+        <td> Descripcio:
+        <textarea name="descripcio" rows="4" cols="50"></textarea>
         <input type="submit">
         </select>
         </form>
