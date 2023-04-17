@@ -12,8 +12,6 @@ $mysqli = include_once "conexion.php";
     <title>Document</title>
 </head>
 <body>
-    
-
 
 <?php
 include_once "encabezado.php";
@@ -28,7 +26,6 @@ if (!$INCIDENCIA) {
     exit("No hi ha resultats per aquest id");
 }
 ?>
-
 
 <h1>INCIDENCIA: </h1>
 <div class="grid">

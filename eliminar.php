@@ -1,6 +1,7 @@
 <?php include_once "encabezado.php"; ?>
 <?php
 $mysqli = include_once "conexion.php";
+
 $resultado = $mysqli->query("SELECT idInc, descripcio, departament FROM INCIDENCIA");
 $INCIDENCIA = $resultado->fetch_all(MYSQLI_ASSOC)
 ?>
