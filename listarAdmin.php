@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +8,10 @@
 </head>
 <body>
 <?php
-$mysqli = include_once "encabezado.php";
+include_once "encabezado.php";
 $mysqli = include_once "conexion.php";
 $resultado = $mysqli->query("SELECT INCIDENCIA.* , idInc, descripcio, prioritat, DEPARTAMENT.depart, TIPOLOGIA.tip, TECNIC.tecn, DATE(data) as data FROM INCIDENCIA LEFT JOIN TECNIC ON TECNIC.idTec=INCIDENCIA.tecnic LEFT JOIN DEPARTAMENT ON DEPARTAMENT.idDep=INCIDENCIA.departament LEFT JOIN TIPOLOGIA ON TIPOLOGIA.idTip=INCIDENCIA.tipus");
-
 ?>
-
-
-
 
 <h1>Llistat D'incidencies</h1>
 <div class="grid">
@@ -42,13 +37,10 @@ $resultado = $mysqli->query("SELECT INCIDENCIA.* , idInc, descripcio, prioritat,
         <span class="priori"><?php echo $fila["prioritat"] ?></span>
         <span class="tipus"><?php echo $fila["tip"] ?></span>
         <span class="tecn"><?php echo $fila["tecn"] ?></span>
+        <a href="./deleteAlert.html" class="btn-3d-can"><span>Borrar</span></a>
+        <a href="./editarIncidencia.php?idInc=<?php echo $fila["idInc"] ?>" class="btn-3d-sub"><span>Actualitzar</span></a>
         
-        <button class="actualitzar">
-        <a href="./editarIncidencia.php?idInc=<?php echo $fila["idInc"] ?>">Actualitzar</a>
-        </button>
-        <button class="eliminar">
-            <a href="./eliminar.php?idInc=<?php echo $fila["idInc"] ?>">Eliminar </a>
-        </button>
+
         
     </div>
     <?php } ?>

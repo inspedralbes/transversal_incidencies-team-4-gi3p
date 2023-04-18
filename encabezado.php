@@ -10,10 +10,19 @@
 <body>
     
 <nav class="menu">
-  <a class="item" href="./index.php">Inici</a>
-  <a class="item" href="./listarUsu.php">Llistat</a>
-  <a class="item" href="#">Registre</a>
-  <a class="item" href="#">Visualització</a>
+  <div class="logo">
+    <a href="adminPanel.php" class="return-index">
+      <span class="logo">
+        <img src="images/campus.png" alt="Incidencies Pedralbes">
+      </span>
+    </a>
+  </div>
+  <div class="menu-enllaços">
+    <a class="item" href="./adminPanel.php">Inici</a>
+    <a class="item" href="./listarAdmin.php">Llistat</a>
+    <a class="item" href="./cercarIncidencia.php">Registre</a>
+    <a class="item" href="#">Visualització</a>
+  </div>
 </nav>
 
 </body>

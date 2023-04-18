@@ -8,7 +8,7 @@
 <?php
  
     echo "Logged out successfully";
-    echo "<a href='index.php'>Inicio</a><br>";
+    echo "<a href='adminPanel.php'>Inicio</a><br>";
 
     session_destroy();
  

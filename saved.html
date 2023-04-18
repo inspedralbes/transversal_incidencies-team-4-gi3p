@@ -10,14 +10,14 @@
 <body>
     <script>
         Swal.fire({
-            title: 'Seguro que quieres borrarla?',
-            icon: 'warning',
-        }).then(function(){
-            window.location.href = "eliminar.php?"
-        
-        });
-        
+            position: 'top',
+            icon: 'success',
+            title: 'Your work has been saved',
+            showConfirmButton: true,
+            timer: 3000
+            }).then(function(){
+                window.location.href= "listarUsu.php"
+            });
     </script>
-    
 </body>
 </html>

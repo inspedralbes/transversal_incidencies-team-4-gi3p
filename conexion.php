@@ -1,7 +1,7 @@
 <?php
-$host = "localhost";
-$usuario = "a21rublormar_bd";
-$contrasenia = "0320Rlm03";
+$host = "db";
+$usuario = "root";
+$contrasenia = "1Password";
 $base_de_datos = "a21rublormar_INCIDENCIES";
 
 $mysqli = new mysqli($host, $usuario, $contrasenia, $base_de_datos);

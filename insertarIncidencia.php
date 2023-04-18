@@ -17,18 +17,23 @@ $resultado = $mysqli->query("SELECT descripcio, departament FROM INCIDENCIA");
     
 <h1>INSERTA UNA INCIDENCIA</h1>
 <div class="grid">
+    
     <div class="container-grid">
         <h2>Selecciona un departament</h2>
+        <h2>Descripcio</h2>
+    </div>
+    <div class="depar_desc">
         <form action="insertar.php" method="post">
         <select name="departament" id="departament">
-            <option value="CAT">Catala</option>
+            <option value="CAT" placeholder="selecciona">Catala</option>
             <option value="CIE">Ciencies</option>
             <option value="HIS">Historia</option>
             <option value="MAT">Matematiques</option>
-        <td> Descripcio:
-        <textarea name="descripcio" rows="4" cols="50"></textarea>
-        <input type="submit">
         </select>
+        <div class="desc">
+            <textarea name="descripcio" rows="4" cols="50"></textarea>
+            <input type="submit">
+        </div>
         </form>
     </div>
 </div>
