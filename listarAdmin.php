@@ -1,6 +1,4 @@
-<?php
-$mysqli = include_once "conexion.php";
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +10,13 @@ $mysqli = include_once "conexion.php";
 <body>
 <?php
 $mysqli = include_once "encabezado.php";
-
+$mysqli = include_once "conexion.php";
 $resultado = $mysqli->query("SELECT INCIDENCIA.* , idInc, descripcio, prioritat, DEPARTAMENT.depart, TIPOLOGIA.tip, TECNIC.tecn, DATE(data) as data FROM INCIDENCIA LEFT JOIN TECNIC ON TECNIC.idTec=INCIDENCIA.tecnic LEFT JOIN DEPARTAMENT ON DEPARTAMENT.idDep=INCIDENCIA.departament LEFT JOIN TIPOLOGIA ON TIPOLOGIA.idTip=INCIDENCIA.tipus");
 
 ?>
+
+
+
 
 <h1>Llistat D'incidencies</h1>
 <div class="grid">
@@ -33,7 +34,7 @@ $resultado = $mysqli->query("SELECT INCIDENCIA.* , idInc, descripcio, prioritat,
     <?php 
     foreach($resultado as $fila) { ?>
     
-    <div class="incidencies-admin">
+    <div class="incidencies-admin"> 
         <span class="id"><?php echo $fila["idInc"] ?></span>
         <span class="depar"><?php echo $fila["depart"] ?></span>
         <span class="desc"><?php echo $fila["descripcio"] ?></span>
