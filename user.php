@@ -10,6 +10,7 @@ $mysqli = include_once "conexion.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/administrador.css">
     <title>Document</title>
+    
 </head>
 <body>
     <?php
@@ -23,18 +24,23 @@ $mysqli = include_once "conexion.php";
  <h1>Opcions Posibles</h1>
   <div class="services">
     <div class="service">
-      <i class="fa fa-globe"></i>
-      <h4 class="title">Cercar Incidencia</h4>
-        <a href="./cercarIncidencia.php">
-            <img src="images/cercarIncidencia.png" width="80px" height="110px" style="padding-top: 25px">
+      <h4 class="title">Insertar Incidencia</h4>
+        <a href="./insertarIncidencia.php">
+            <img src="images/insertar.png" width="80px" height="130px" style="padding-top: 45px">
         </a>
     </div>
 
     <div class="service">
-      <i class="fa fa-rocket"></i>
       <h4 class="title">Llistat</h4>
-        <a href="./listarAdmin.php">
-            <img src="images/listado.png" width="90px" height="130px" style="padding-top: 50px">
+        <a href="./listarUsu.php">
+            <img src="images/listado.png" width="90px" height="160px" style="padding-top: 70px">
+        </a>
+    </div>
+
+    <div class="service">
+      <h4 class="title">Consultar Incidencia</h4>
+        <a href="./cercarIncidencia.php">
+            <img src="images/cercarIncidencia.png" width="85px" height="130px" style="padding-top: 50px">
         </a>
     </div>
 

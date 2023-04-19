@@ -20,12 +20,11 @@ $resultado = $mysqli->query("SELECT idInc, descripcio, DATE(data) as data, depar
         <span class="id">ID</span>
         <span class="depar">Departament</span>
         <span class="desc">Descripció</span>
-        <span class="data">Fecha</span>
+        <span class="data">Data</span>
     </div>
 
     <?php 
     foreach($resultado as $fila) { ?>
-    <a href="./editarIncidencia.php?idInc=<?php echo $fila["idInc"] ?>" >
     <div class="incidencies">
         <span class="id"><?php echo $fila["idInc"] ?></span>
         <span class="depar"><?php echo $fila["departament"] ?></span>
