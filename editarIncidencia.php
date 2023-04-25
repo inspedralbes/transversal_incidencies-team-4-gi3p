@@ -181,10 +181,9 @@ a:hover {
 <div class="grid">
     <div class="container-grid">
     <h1><?php echo $incidencia["descripcio"] ?></h1>
-        <form action="actualizar.php" method="post">
-
+        
 <input type="hidden" name="idInc" value="<?php echo $incidencia["idInc"] ?>">
-
+  <form action="actualizar.php?idInc=" method="post">
         <label for="tecnic">Tècnic:</label>
         <select name="tecnic" id="color" required>
         <option value="">[ Tecnic ]</option>

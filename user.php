@@ -1,6 +1,7 @@
 <?php
 session_start();
 $mysqli = include_once "conexion.php";
+include_once "encabezadoUsu.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +9,7 @@ $mysqli = include_once "conexion.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/administrador.css">
+    <link rel="stylesheet" href="css/admin.css">
     <title>Document</title>
     
 </head>
@@ -39,7 +40,7 @@ $mysqli = include_once "conexion.php";
 
     <div class="service">
       <h4 class="title">Consultar Incidencia</h4>
-        <a href="./cercarIncidencia.php">
+        <a href="./cercarIncidenciausu.php">
             <img src="images/cercarIncidencia.png" width="85px" height="130px" style="padding-top: 50px">
         </a>
     </div>

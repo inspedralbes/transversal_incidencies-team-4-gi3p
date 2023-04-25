@@ -13,6 +13,7 @@
 
     <?php
     echo "<a href='index.php'>Inicio</a>";
+    session_destroy();
     
 ?>
 </body>

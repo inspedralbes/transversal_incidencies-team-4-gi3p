@@ -1,41 +1,127 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Llistat Incidencies</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/estilos.css">
+  
+  <style>
+      table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #2196F3;
+  color: #fff;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.btn:hover {
+  background-color: #0b7dda;
+  color: #fff;
+}
+
+.btn-3d-sub {
+  position: relative;
+  display: inline-block;
+  background-color: #2196F3;
+  color: #fff;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.btn-3d-sub:hover {
+  background-color: #0b7dda;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-3d-can {
+  position: relative;
+  display: inline-block;
+  background-color: #DC143C;
+  color: #fff;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.btn-3d-can:hover {
+  background-color: #9b2020;
+  color: #fff;
+  transform: translateY(-2px);
+}
+      </style>
 </head>
 <body>
 <?php
-$mysqli = include_once "encabezado.php";
+include_once "encabezadoUsu.php";
 $mysqli = include_once "conexion.php";
 $resultado = $mysqli->query("SELECT idInc, descripcio, DATE(data) as data, departament FROM INCIDENCIA");
 ?>
 
 <h1>Llistat D'incidencies</h1>
-<div class="grid">
-    <div class="container-grid">
-        <span class="id">ID</span>
-        <span class="depar">Departament</span>
-        <span class="desc">Descripció</span>
-        <span class="data">Data</span>
-    </div>
-
-    <?php 
-    foreach($resultado as $fila) { ?>
-    <div class="incidencies">
-        <span class="id"><?php echo $fila["idInc"] ?></span>
-        <span class="depar"><?php echo $fila["departament"] ?></span>
-        <span class="desc"><?php echo $fila["descripcio"] ?></span>
-        <span class="data"><?php echo $fila["data"] ?></span>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Departament</th>
+      <th>Descripció</th>
+      <th>Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach($resultado as $fila) { ?>
+      <tr>
+        <td><?php echo $fila["idInc"] ?></td>
+        <td><?php echo $fila["departament"] ?></td>
+        <td><?php echo $fila["descripcio"] ?></td>
+        <td><?php echo $fila["data"] ?></td>
         
-    </div>
-    </a> 
+      </tr>
     <?php } ?>
+  </tbody>
+</table>
 
-</div>
+</body>
+</html>
+
+
 
 </body>
 </html>

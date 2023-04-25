@@ -5,7 +5,7 @@ $mysqli = include_once "conexion.php";
 $username = $_POST['username'];
 $pwd = $_POST['password'];
 
-if($username == 'root' and $pwd == '1Password')
+if($username == 'admin' and $pwd == '1234')
 {    
     $_SESSION['id']=session_id();
     $_SESSION['username']=$username;

@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Título de la página</title>
+	<link rel="stylesheet" href="estilos.css">
 	<script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
   <style>
     header {
@@ -62,9 +63,8 @@ nav a:hover {
 		</div>
 		<nav class="menu">
 			<ul class="menu-items">
-        <li><a href="index.php">Index</a></li>
-				<li><a href="administrador.php">Opcions Posibles</a></li>
-				<li><a href="logoutSuccess.html">Logout</a></li>
+				<li><a href="index.php">Index</a></li>
+				<li><a href="user.php">Opcions Posibles</a></li>
 			</ul>
 		</nav>
 		<div class="logo">

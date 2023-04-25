@@ -94,7 +94,7 @@ input[type="submit"]:hover {
 </head>
 
 <?php
-include_once "encabezado.php";
+include_once "encabezadoUsu.php";
 $mysqli = include_once "conexion.php";
 $resultado = $mysqli->query("SELECT descripcio, departament FROM INCIDENCIA");
 ?>
