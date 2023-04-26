@@ -1,5 +1,5 @@
 <?php
-include_once "encabezado.php";
+include_once "encabezadoAdmin.php";
 $mysqli = include_once "conexion.php";
 
 if(isset($_POST["prioritat"]) && isset($_POST["tipus"]) && isset($_POST["tecnic"]) && isset($_GET["idInc"])) {

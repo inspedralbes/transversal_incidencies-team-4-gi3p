@@ -50,9 +50,7 @@
     </style>
 </head>
 <body>
-  <?php
-  include_once "encabezadoUsu.php";
-  ?>
+  
     <header>
     </header>
     <div>
@@ -63,7 +61,7 @@
     </form>
   <br>
   <?php
-  include_once "encabezado.php";
+  include_once "encabezadoUsu.php";
   if(isset($_GET['Buscar'])){
       $id = $_GET['id'];
       $consulta = $con->query("SELECT * FROM INCIDENCIA WHERE LIKE'%$id");
